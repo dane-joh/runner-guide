@@ -46,4 +46,16 @@ As of May 2025, here (see the graphic below) is the current state of GitHub's GH
 
 # Why NOT GitHub-Hosted Runners (GHRs)?
 
+If GHRs can meet or surpass your requirements in regard to security (first and foremost), performance, availability, total cost of ownership, and ease of troubleshooting, why would you NOT choose to utilize them? 
+
+That said, based on the investments GitHub has made in GHRs over the past several years and the feedback we've gathered from our customers about their experiences with both GHRs and SHRs, **GitHub encourages customers to adopt a GHR-first mentality when making decisions about whether to use GHRs or SHRs**. 
+
+Our reason for doing so stems from our demonstrated ability to indeed meet (and even surpass) customer requirements in each of the the five areas of concern mentioned above for most CI/CD use cases. The following graphic helps explain our reasoning in more detail:
+
+<img width="1006" alt="Screenshot 2025-05-21 at 6 33 46 PM" src="https://github.com/user-attachments/assets/6f18f165-0a6a-4b8a-aed2-77ae3aa0911a" />
+
+I'll unpack the GHR story in each of these areas of concern in the text that follows. 👇
+
+**Security and GHRs**
+
 
