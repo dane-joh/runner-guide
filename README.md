@@ -11,7 +11,7 @@ GitHub Actions offers two types of runners: **GitHub-Hosted Runners (GHRs)** and
 - Provisioned, warmed, auto-scaled, network-secured, monitored, and deprovisioned by GitHub (i.e. fully-managed)
 - Billed per-minute (inclusive of compute, storage, networking and GitHub managed services)
 
-**A Self-Hosted Runner (SHR) differs from a GHR in these notable ways:**
+**A Self-Hosted Runner (SHR), while similar to a GHR, differs from a GHR in these notable ways:**
 
 - It may be instantiated as a full VM (Linux, Windows, macOS) OR, if auto-scaling is desired, may be instatiated as a container on Kubernetes (Linux only). Network isolation _must_ be properly configured and monitored by the customer. The customer deploys to whatever cloud or on-premises server platform they desire.
 - It is typically based on a customer-generated and managed custom container/VM image.
