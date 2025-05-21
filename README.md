@@ -19,10 +19,31 @@ GitHub Actions offers two types of runners: **GitHub-Hosted Runners (GHRs)** and
 - All implementation and ongoing management of a SHR to keep it secure, performant, available, cost-efficient, and easy to troubleshoot is the full responsibility of the customer.
 - The compute is typically billed per-minute by the public cloud provider platform via which the runner is provisioned. Customers must also factor in additional storage and networking costs, cloud governance services costs supporting the implementation, and labor costs associated to managing the SHR deployment.
 
-**When surveying the differences between the two types of runners, customers should acknowledge the following:**
+**That said, here are the high-level diffentiators to consider when comparing the two runner types:**
 
 - **Security.** Zero trust microsegmentation and SLSA Level 3 build isolation comes out-of-the-box with GHRs. For SHRs, customers must design, implement, and monitor a similar network isolation architecture themselves. 
 - **Labor costs.** GHRs feature minimal upfront and ongoing administrative labor costs. SHRs require extensive upfront and ongoing labor costs.
 - **Turnkey utilization.** When starting off, GHRs can be used almost immediately in turnkey fashion. With SHRs, customers must first go through a security-validated implementation process.
 - **Pricing.** Because GHRs are a fully-managed SaaS service, customers should expect to pay more per-minute for compute utilized than they would do with SHRs. However, customers will pay notably more in labor costs associated to implementing and managing SHRs in ongoing fashion.
-- **Configuration flexibility.** While GHRs give customers a great extent of flexibility in configuring the runner environment, SHRs will ultimately provide customers with a greater degree of flexibility. That said, GHRs provide the flexibility need to meet the requirements of most CI/CD use cases. Where GHRs cannot meet those requirements, SHRs provdie an optional path for runner hosting.
+- **Configuration flexibility.** While GHRs give customers a great extent of flexibility in configuring the runner environment, SHRs will ultimately provide customers with a greater degree of flexibility. That said, GHRs provide the flexibility needed to meet the requirements of most CI/CD use cases. Where GHRs cannot meet those requirements, SHRs provide an alternative option for consideration.
+
+# Intro to GitHub-Hosted Runners (GHRs)
+
+As mentioned above, GHRs are ephemeral, network-isolated VMs that GitHub provides and manages on behalf of customers. They can be booted from GitHub-provided VM images OR booted from customer-provided custom VM images and _always_ feature a clean image for every job run. 
+
+Each GHR is based on a select VM SKU chosen by the customer from the variety of SKUs featured in the GHR compute fleet. This fleet of SKUs features the following:
+
+- Multiple OSes (Linux, Windows Server and Desktop, macOS)
+- Multiple hardware types (x64, arm64)
+- A broad range of machine sizes, from 2-cores up to 96 cores
+- GPU-enabled machines (more coming soon)
+
+More SKUs are tentatively slated to join the fleet in CY2025, namely M2 Pros, M4 Pros, more GPU-enabled machines, memory- and storage-optimized machines, and (potentially) a new lightweight compute SKU option for jobs that run in under 1 minute. Please NOTE: New SKU plans are always subject to change.
+
+As of May 2025, here (see the graphic below) is the current state of GitHub's GHR fleet:
+
+<img width="1006" alt="Screenshot 2025-05-21 at 6 07 25 PM" src="https://github.com/user-attachments/assets/3b8ba78f-ae18-44ad-87de-0ec69ea893c4" />
+
+# Why NOT GitHub-Hosted Runners (GHRs)?
+
+
